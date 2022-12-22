@@ -1,0 +1,10 @@
+<mat-selection-list>
+  <div mat-subheader>Genres</div>
+  <mat-list-item *ngFor="let genre of genres" routerLink="/genres/{{genre.id}}">
+    <mat-icon matListItemIcon>category</mat-icon>
+    <div matListItemTitle>{{genre.name}}</div>
+    <div matListItemLine></div>
+  </mat-list-item>
+</mat-selection-list>
+
+<button mat-raised-button color="primary" routerLink="/genres/new">New Genre</button>

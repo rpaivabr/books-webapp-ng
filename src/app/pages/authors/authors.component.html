@@ -1,0 +1,10 @@
+<mat-selection-list>
+  <div mat-subheader>Authors</div>
+  <mat-list-item *ngFor="let author of authors" routerLink="/authors/{{author.id}}">
+    <mat-icon matListItemIcon>person</mat-icon>
+    <div matListItemTitle>{{author.name}}</div>
+    <div matListItemLine></div>
+  </mat-list-item>
+</mat-selection-list>
+
+<button mat-raised-button color="primary" routerLink="/authors/new">New Author</button>

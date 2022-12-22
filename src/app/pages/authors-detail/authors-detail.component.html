@@ -1,0 +1,22 @@
+<form class="example-form" [formGroup]="authorForm">
+  <mat-form-field class="example-full-width">
+    <mat-label>Name</mat-label>
+    <input matInput [formControl]="nameControl" />
+    <mat-error *ngIf="nameControl.hasError('required')">
+      Name is required
+    </mat-error>
+  </mat-form-field>
+
+  <button
+    type="button"
+    mat-raised-button
+    color="primary"
+    (click)="saveAuthor()"
+    [disabled]="!authorForm.valid"
+  >
+    {{ isEdit ? "Update" : "Create" }}
+  </button>
+  <button type="button" *ngIf="isEdit" mat-raised-button color="warn" (click)="deleteAuthor()">
+    Delete
+  </button>
+</form>

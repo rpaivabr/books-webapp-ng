@@ -1,0 +1,10 @@
+<mat-selection-list>
+  <div mat-subheader>Books</div>
+  <mat-list-item *ngFor="let book of books" routerLink="/books/{{book.id}}">
+    <mat-icon matListItemIcon>menu_book</mat-icon>
+    <div matListItemTitle>{{book.title}}</div>
+    <div matListItemLine>Year: {{book.year}} - Author: {{book.author.name}}</div>
+  </mat-list-item>
+</mat-selection-list>
+
+<button mat-raised-button color="primary" routerLink="/books/new">New Book</button>
